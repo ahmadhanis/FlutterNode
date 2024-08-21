@@ -31,13 +31,13 @@ class HomeScreenState extends State<HomeScreen> {
     super.dispose();
   }
 
-  // @override
-  // void didChangeDependencies() {
-  //   super.didChangeDependencies();
-  //   // socketService = Provider.of<SocketService>(context, listen: false);
-  //   socketService.connect();
-  //   socketService.join(widget.userId);
-  // }
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // socketService = Provider.of<SocketService>(context, listen: false);
+    socketService.connect();
+    socketService.join(widget.userId);
+  }
 
   void _logout() async {
     // socketService = Provider.of<SocketService>(context, listen: false);

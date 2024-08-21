@@ -57,7 +57,7 @@ class ChatScreenState extends State<ChatScreen> {
                 bool isSentByCurrentUser =
                     messages[index]['fromUserId'] == widget.currentUserId;
                 return Container(
-                  margin: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                  margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
                   alignment: isSentByCurrentUser
                       ? Alignment.centerRight
                       : Alignment.centerLeft,
@@ -67,7 +67,7 @@ class ChatScreenState extends State<ChatScreen> {
                         : CrossAxisAlignment.start,
                     children: [
                       Container(
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           color: isSentByCurrentUser
                               ? Colors.blue
@@ -83,12 +83,12 @@ class ChatScreenState extends State<ChatScreen> {
                           ),
                         ),
                       ),
-                      SizedBox(height: 5),
+                      const SizedBox(height: 5),
                       Text(
                         isSentByCurrentUser
                             ? 'You'
                             : 'From: ${messages[index]['fromUserId']}',
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontSize: 12, fontWeight: FontWeight.bold),
                       ),
                     ],
@@ -113,7 +113,7 @@ class ChatScreenState extends State<ChatScreen> {
                   ),
                 ),
                 IconButton(
-                  icon: Icon(Icons.send),
+                  icon: const Icon(Icons.send),
                   onPressed: _sendMessage,
                 ),
               ],
